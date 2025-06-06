@@ -1,0 +1,18 @@
+Mỗi test case cần được viết theo định dạng sau:
+
+ID;Chức năng;Loại test case;Mô tả;Các bước thực hiện;Kỳ vọng;Thực tế;Kết quả
+
+Quy định:
+- Cột ID: bắt đầu là TC01 và tăng dần (TC02, TC03,...)
+- Cột chức năng: luôn là tên của chức năng đang kiểm thử
+- Cột "Loại test case" có 2 loại: "UI" hoặc "Chức năng"
+- Cột "Mô tả" sẽ mô tả sơ hướng test như: đăng nhập với tài khoản hợp lệ, đăng nhập với tài khoản sai mật khẩu,...
+- Cột "Các bước thực hiện": ghi chi tiết từng bước như: nhập giá trị gì vào ô nào, nhấn nút nào, chờ điều gì...
+- Cột "Kỳ vọng": ghi rõ kết quả mong muốn sau khi thực hiện các bước
+- Cột "Thực tế" và "Kết quả": để trống
+- Viết trước toàn bộ các test case cho UI, sau đó mới đến test case cho Chức năng
+- Ghi càng đầy đủ càng tốt tất cả các test case có thể có.
+
+Lưu ý:
+- Khi tạo test case chỉ cần đưa ra test case, không cần thêm bất cứ lời nào
+- Test case được tạo được gộp chung vào 1 bảng và không cần thêm ghi chú vào

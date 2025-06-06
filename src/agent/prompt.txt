@@ -1,1 +1,0 @@
-tạo tự động cho tôi tất cả test case cho chức năng đăng nhập với các yêu cầu sau: tên đăng nhập không chứa kí tự đặc biệt, không dài quá 16 kí tự và không ít hơn 6 kí tự. mật khẩu ít nhất 6 kí tự
