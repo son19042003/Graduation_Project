@@ -1,0 +1,15 @@
+Tạo các test case cho chức năng thanh toán của một website
+
+Yêu cầu của hệ thống như sau:
+- Ngôn ngữ hiển thị: Tiếng Việt
+- Trang thanh toán sẽ có 3 phần chính:
+    + Chi tiết thanh toán: bao gồm các trường để nhập họ và tên, số điện thoại và địa chỉ; các trường này không được để trống, số điện thoại đúng định dạng đủ 10 số
+    + Tóm tắt đơn hàng sẽ có tổng tiền và hiện đầy đủ sản phẩm đã được chọn cũng như số lượng sản phẩm đó
+    + Phương thức thanh toán sẽ chọn phương thức dùng để thanh toán, các phương thức thanh toán sẽ được chọn bởi radio button
+        + chọn thanh toán khi nhận hàng và bấm đặt hàng sẽ nhận được thông báo đặt hàng thành công và di chuyển đến trang quản lý tài khoản
+        + chọn thanh toán vnpay và bấm đặt hàng sẽ được chuyển đến trang thanh toán vnpay
+        + chọn thanh toán momo và bấm đặt hàng sẽ được chuyển đến cổng thanh toán momo
+Dữ liệu kiểm thử:
+- Tài khoản đăng nhập:
+    + Email: tester1@gmail.com
+    + Password: 123456

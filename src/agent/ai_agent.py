@@ -33,7 +33,7 @@ def generate_testcase_from_prompt(full_prompt: str) -> str:
         data = response.json()
         return data['candidates'][0]['content']['parts'][0]['text']
     except requests.exceptions.RequestException as e:
-        print(f'[ERROR] Request failed: {e}')
+        print(f'[ERROR] Gửi yêu cầu thất bại: {e}')
         return ""
 
 def parse_testcase_text(text: str):
@@ -130,7 +130,7 @@ def main():
             continue
 
         ws = wb.create_sheet(title=func_name)
-        headers = ["ID", "Chức năng", "Loại test case", "Mô tả", "Các bước thực hiện", "Kỳ vọng", "Thực tế", "Kết quả"]
+        headers = ["ID", "Chức năng", "Loại test case", "Mô tả", "Dữ liệu test", "Kỳ vọng", "Thực tế", "Kết quả"]
         ws.append(headers)
 
         for row in testcases:

@@ -1,0 +1,16 @@
+Tạo các test case cho chức năng giỏ hàng của một website
+
+Yêu cầu của hệ thống như sau:
+- Ngôn ngữ hiển thị: Tiếng Việt
+- Trang giỏ hàng sẽ hiện đầy đủ Sản phẩm, đơn giá, số lượng và tổng, bên phải mỗi sản phẩm sẽ có một button để xóa sản phẩm đó ra khỏi giỏ hàng
+- Tổng sẽ là Đơn giá x số lượng
+- Ngoài ra còn có tổng tiền là tổng của từng sản phẩm cộng lại, tổng tiền sẽ thay đổi theo số lượng cũng như loại sản phẩm đang có trong giỏ hàng
+- có thể thay đổi số lượng của sản phẩm trong trang giỏ hàng
+- số lượng thay đổi chỉ có thể >=1
+- có button thanh toán nằm bên phải ở dưới, liên kết "Tiếp tục mua sắm" nằm ở dưới bên trái
+- Có thể xóa sản phẩm khỏi giỏ hàng
+- Khi bấm "Thanh toán" sẽ chuyển hướng đến trang thanh toán
+Dữ liệu kiểm thử:
+- Tài khoản đăng nhập:
+    + Email: tester1@gmail.com
+    + Password: 123456

@@ -1,3 +1,7 @@
 [
-  "login.txt"
+  "cart.txt",
+  "detail.txt",
+  "payment.txt",
+  "login.txt",
+  "search.txt"
 ]
