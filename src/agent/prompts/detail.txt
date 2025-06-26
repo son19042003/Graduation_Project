@@ -2,13 +2,19 @@ Tạo các test case cho chức năng xem chi tiết sản phẩm của một we
 
 Yêu cầu của hệ thống như sau:
 - Ngôn ngữ hiển thị: Tiếng Việt
-- sản phẩm hiển thị đầy đủ đơn giá, phân loại, số lượng, số lượng để thêm vào giỏ hàng và thêm được vào giỏ hàng
-- Phân loại có thể chọn, số lượng sẽ hiện theo phân loại được chọn
+- Có hiển thị đơn giá
+- Có hiển thị số lượng
+- Có hiển thị phân loại
+- Có nút "Thêm vào giỏ hàng"
+- Có thể tăng giảm số lượng muốn mua
+- Phân loại có thể chọn
 - số lượng chọn để thêm vào giỏ hàng có thể tự nhập hoặc bấm "-" để giảm, "+" để thêm, số lượng này không thể bằng 0 hoặc là số âm và không vượt quá số lượng tồn kho của phân loại hàng đó
 - khi bấm thêm vào giỏ hàng sẽ phải đảm bảo đã chọn phân loại và số lượng là hợp lệ
-- khi thêm vào giỏ hàng mà chưa đăng nhập nhận thông báo phải đăng Nhập
+- khi thêm vào giỏ hàng mà chưa đăng nhập nhận thông báo phải đăng nhập
 - Khi thêm thành công vào giỏ hàng sẽ có thông báo thêm thành công
 Dữ liệu kiểm thử:
-- tài khoản để đăng nhập:
+- tài khoản để đăng nhập (luôn kèm theo các test case, trừ test case không cần đăng nhập):
     + Email: tester1@gmail.com
     + Password: 123456
+- phân loại: Màu xanh dương - SX (tồn kho: 457)
+- số lượng hợp lệ: 5

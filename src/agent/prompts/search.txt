@@ -2,12 +2,12 @@ Tạo các test case cho chức năng tìm kiếm sản phẩm của một websi
 
 Yêu cầu của hệ thống như sau:
 - Ngôn ngữ hiển thị: Tiếng Việt
-- Ô tìm kiếm nằm tên thanh header của trang, place holder là "Tìm kiếm sản phẩm"
-- Ô tìm kiếm có button là icon kính lúp nằm bên phải
+- Có ô tìm kiếm trong trang, place holder là "Tìm kiếm sản phẩm"
+- Ô tìm kiếm có button tìm kiếm
 - Ô tìm kiếm cho phép nhập bất cứ ký tự nào
 - Khi danh sách sản phẩm của website có chứa đúng keyword đã nhập thì sẽ được hiện ra sau khi bấm tìm kiếm
 - Khi danh sách sản phẩm của website không chứa bất kỳ keyword nào đã nhập thì danh sách sản phẩm không hiện ra mà chỉ có button "Xem thêm"
-- khi nhập keyword xong có thể bấm enter hoặc bấm vào button tìm kiếm hình kính lúp trong ô tìm kiếm
+- khi nhập keyword xong có thể bấm enter hoặc bấm vào button tìm kiếm trong ô tìm kiếm
 Dữ liệu kiểm thử:
-- Một số keyword có thể tìm sản phẩm: Life, Vintage, Charm
-- Một số keyword không tìm được sản phẩm: zz, xyz
+- Keyword có thể tìm sản phẩm: Life
+- Keyword không tìm được sản phẩm: zzxy

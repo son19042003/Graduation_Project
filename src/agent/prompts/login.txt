@@ -2,26 +2,25 @@ Tạo các test case cho chức năng đăng nhập của một website
 
 Yêu cầu của hệ thống như sau:
 - Ngôn ngữ hiển thị: Tiếng Việt
-- Liên kết "Quên mật khẩu" nằm bên trái dưới ô Mật khẩu
-- Nút "Đăng nhập" nằm ở dưới 2 ô input và có nền màu xanh dương, khi hover vào có nền màu xám
-- Nút "Đăng ký" nằm ở dưới nút "Đăng nhập" và có nền màu xám, khi hover vào có nền màu xanh dương
-- Giao diện hệ thống không bị vỡ hoặc chèn ép các thành phần với nhau trên nhiều thiết bị khác nhau
+- Có liên kết "Quên mật khẩu"
+- Nút "Đăng nhập" có nền với mã màu là rgb(52, 116, 212)
+- Nút "Đăng ký" có nền với mã màu là rgb(85, 85, 85)
 - Địa chỉ Email là ô textbox:
+    + Cho phép click vào để nhập dữ liệu
     + Chỉ cho phép nhập đúng định dạng Email
     + Place holder là "Nhập email của bạn"
-    + Khi click vào textbox, khoanh viền đậm cả ô
     + Khi để trống và nhấn đăng nhập, hiện thông báo "Vui lòng không để trống Email"
 - Mật khẩu là ô textbox, cho phép nhập mật khẩu đăng nhập:
+    + Cho phép click vào để nhập dữ liệu
     + Cho phép nhập 0-9, a-z, A-Z, @ # $ % *
     + Tối thiểu 8 ký tự và tối đa 25 ký tự
-    + Đầu ô có biểu tượng hình khóa
     + Place holder là "Nhập mật khẩu của bạn"
     + Chặn không cho nhập các kí tự không cho phép
-    + Khi click vào textbox này, khoanh viền đậm cả ô
     + Mật khẩu phải được mã hóa bằng kí tự "*"
     + Khi để trống và nhấn đăng nhập, hiển thị thông báo "Vui lòng không để trống mật khẩu"
-- Khi tài khoản sai mật khẩu trên 5 lần, tài khoản sẽ bị khóa 5 phút và nhận được thông báo
 - Khi sai Email hoặc Mật khẩu nhận thông báo "Tài khoản hoặc mật khẩu không chính xác" khi nhấn đăng nhập
+- Khi đăng nhập với tài khoản bị khóa nhận thông báo "Tài khoản của bạn đã bị khóa"
+- Khi đăng nhập không đúng định dạng Email, nhận thông báo "Vui lòng nhập đúng định dạng Email"
 
 Dữ liệu kiểm thử:
 - Tài khoản hợp lệ:

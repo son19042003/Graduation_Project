@@ -1,7 +1,7 @@
 [
-  "cart.txt",
-  "detail.txt",
-  "payment.txt",
+  "search.txt",
   "login.txt",
-  "search.txt"
+  "detail.txt",
+  "cart.txt",
+  "payment.txt"
 ]
