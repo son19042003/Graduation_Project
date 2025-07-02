@@ -1,0 +1,221 @@
+
+=== [Generated on 2025-07-01 21:37:01] ===
+```
+ID;Chức năng;Loại test case;Mô tả;Dữ liệu test;Kỳ vọng;Thực tế;Kết quả
+TC01;Đăng nhập;UI;Kiểm tra ngôn ngữ hiển thị;;"Ngôn ngữ hiển thị là Tiếng Việt";;
+TC02;Đăng nhập;UI;Kiểm tra liên kết "Quên mật khẩu";;"Hiển thị liên kết ""Quên mật khẩu""";;
+TC03;Đăng nhập;UI;Kiểm tra màu nền nút "Đăng nhập";;"Màu nền nút ""Đăng nhập"" là rgb(52, 116, 212)";;
+TC04;Đăng nhập;UI;Kiểm tra màu nền nút "Đăng ký";;"Màu nền nút ""Đăng ký"" là rgb(85, 85, 85)";;
+TC05;Đăng nhập;UI;Kiểm tra khả năng click vào ô Email;;"Cho phép click vào ô Email";;
+TC06;Đăng nhập;UI;Kiểm tra placeholder ô Email;;"Placeholder ô Email là ""Nhập email của bạn""";;
+TC07;Đăng nhập;UI;Kiểm tra khả năng click vào ô Mật khẩu;;"Cho phép click vào ô Mật khẩu";;
+TC08;Đăng nhập;UI;Kiểm tra placeholder ô Mật khẩu;;"Placeholder ô Mật khẩu là ""Nhập mật khẩu của bạn""";;
+TC09;Đăng nhập;UI;Kiểm tra mật khẩu được mã hóa;"Mật khẩu được mã hóa bằng kí tự ""*""";;
+TC10;Đăng nhập;Chức năng;Đăng nhập với tài khoản hợp lệ;Email: tester1@gmail.com, Mật khẩu: 123456;"Đăng nhập thành công";;
+TC11;Đăng nhập;Chức năng;Đăng nhập với tài khoản đã bị khóa;Email: tester2@gmail.com, Mật khẩu: 12345678;"Hiển thị thông báo ""Tài khoản của bạn đã bị khóa""";;
+TC12;Đăng nhập;Chức năng;Đăng nhập với Email và Mật khẩu không hợp lệ;Email: abc@gmail.com, Mật khẩu: sai_mat_khau;"Hiển thị thông báo ""Tài khoản hoặc mật khẩu không chính xác""";;
+TC13;Đăng nhập;Chức năng;Đăng nhập với Email không đúng định dạng;Email: abc, Mật khẩu: 123456;"Hiển thị thông báo ""Vui lòng nhập đúng định dạng Email""";;
+TC14;Đăng nhập;Chức năng;Đăng nhập với Email để trống;Email: , Mật khẩu: 123456;"Hiển thị thông báo ""Vui lòng không để trống Email""";;
+TC15;Đăng nhập;Chức năng;Đăng nhập với Mật khẩu để trống;Email: tester1@gmail.com, Mật khẩu: ;"Hiển thị thông báo ""Vui lòng không để trống mật khẩu""";;
+TC16;Đăng nhập;Chức năng;Đăng nhập với Mật khẩu nhỏ hơn 8 ký tự;Email: tester1@gmail.com, Mật khẩu: 1234567;"Hiển thị thông báo ""Tài khoản hoặc mật khẩu không chính xác""";;
+TC17;Đăng nhập;Chức năng;Đăng nhập với Mật khẩu lớn hơn 25 ký tự;Email: tester1@gmail.com, Mật khẩu: 12345678901234567890123456;"Hiển thị thông báo ""Tài khoản hoặc mật khẩu không chính xác""";;
+TC18;Đăng nhập;Chức năng;Đăng nhập với mật khẩu chứa ký tự không cho phép;Email: tester1@gmail.com, Mật khẩu: 1234567`;"Hiển thị thông báo ""Tài khoản hoặc mật khẩu không chính xác""";;
+TC19;Đăng nhập;Chức năng;Đăng nhập với Email viết hoa;Email: TESTER1@GMAIL.COM, Mật khẩu: 123456;"Đăng nhập thành công";;
+TC20;Đăng nhập;Chức năng;Đăng nhập với Email chứa khoảng trắng;Email: tester1 @gmail.com, Mật khẩu: 123456;"Hiển thị thông báo ""Vui lòng nhập đúng định dạng Email""";;
+```
+
+=== [Generated on 2025-07-01 21:50:46] ===
+```
+ID;Chức năng;Loại test case;Mô tả;Dữ liệu test;Kỳ vọng;Thực tế;Kết quả
+TC01;Đăng nhập;UI;Kiểm tra ngôn ngữ hiển thị; ;Ngôn ngữ hiển thị là Tiếng Việt; ;
+TC02;Đăng nhập;UI;Kiểm tra liên kết "Quên mật khẩu"; ;Hiển thị liên kết "Quên mật khẩu" có thể click vào được; ;
+TC03;Đăng nhập;UI;Kiểm tra màu nền nút "Đăng nhập"; ;Màu nền nút "Đăng nhập" là rgb(52, 116, 212); ;
+TC04;Đăng nhập;UI;Kiểm tra màu nền nút "Đăng ký"; ;Màu nền nút "Đăng ký" là rgb(85, 85, 85); ;
+TC05;Đăng nhập;UI;Kiểm tra ô textbox Email - Khả năng click; ;Cho phép click vào ô textbox Email; ;
+TC06;Đăng nhập;UI;Kiểm tra placeholder của ô textbox Email; ;Placeholder của ô textbox Email là "Nhập email của bạn"; ;
+TC07;Đăng nhập;UI;Kiểm tra ô textbox Mật khẩu - Khả năng click; ;Cho phép click vào ô textbox Mật khẩu; ;
+TC08;Đăng nhập;UI;Kiểm tra placeholder của ô textbox Mật khẩu; ;Placeholder của ô textbox Mật khẩu là "Nhập mật khẩu của bạn"; ;
+TC09;Đăng nhập;UI;Kiểm tra kí tự hiển thị trong ô textbox Mật khẩu; ;Mật khẩu được mã hóa bằng kí tự "*"; ;
+TC10;Đăng nhập;Chức năng;Đăng nhập với Email và Mật khẩu hợp lệ;Email: tester1@gmail.com, Mật khẩu: 123456;Đăng nhập thành công; ;
+TC11;Đăng nhập;Chức năng;Đăng nhập với Email hợp lệ, Mật khẩu không hợp lệ;Email: tester1@gmail.com, Mật khẩu: sai_password;Hiển thị thông báo "Tài khoản hoặc mật khẩu không chính xác"; ;
+TC12;Đăng nhập;Chức năng;Đăng nhập với Email không hợp lệ, Mật khẩu hợp lệ;Email: sai_email@gmail.com, Mật khẩu: 123456;Hiển thị thông báo "Tài khoản hoặc mật khẩu không chính xác"; ;
+TC13;Đăng nhập;Chức năng;Đăng nhập với Email và Mật khẩu không hợp lệ;Email: sai_email@gmail.com, Mật khẩu: sai_password;Hiển thị thông báo "Tài khoản hoặc mật khẩu không chính xác"; ;
+TC14;Đăng nhập;Chức năng;Đăng nhập với Email để trống, Mật khẩu hợp lệ;Email: , Mật khẩu: 123456;Hiển thị thông báo "Vui lòng không để trống Email"; ;
+TC15;Đăng nhập;Chức năng;Đăng nhập với Email hợp lệ, Mật khẩu để trống;Email: tester1@gmail.com, Mật khẩu: ;Hiển thị thông báo "Vui lòng không để trống mật khẩu"; ;
+TC16;Đăng nhập;Chức năng;Đăng nhập với Email và Mật khẩu để trống;Email: , Mật khẩu: ;Hiển thị thông báo "Vui lòng không để trống Email" và "Vui lòng không để trống mật khẩu"; ;
+TC17;Đăng nhập;Chức năng;Đăng nhập với Email không đúng định dạng;Email: sai_email, Mật khẩu: 123456;Hiển thị thông báo "Vui lòng nhập đúng định dạng Email"; ;
+TC18;Đăng nhập;Chức năng;Đăng nhập với tài khoản bị khóa;Email: tester2@gmail.com, Mật khẩu: 12345678;Hiển thị thông báo "Tài khoản của bạn đã bị khóa"; ;
+TC19;Đăng nhập;Chức năng;Đăng nhập với Email có ký tự đặc biệt không được phép;Email: test!@gmail.com, Mật khẩu: 123456;Hiển thị thông báo "Vui lòng nhập đúng định dạng Email"; ;
+TC20;Đăng nhập;Chức năng;Đăng nhập với Mật khẩu dưới 8 ký tự;Email: tester1@gmail.com, Mật khẩu: 1234567;Hiển thị thông báo "Tài khoản hoặc mật khẩu không chính xác"; ;
+TC21;Đăng nhập;Chức năng;Đăng nhập với Mật khẩu trên 25 ký tự;Email: tester1@gmail.com, Mật khẩu: 12345678901234567890123456;Hiển thị thông báo "Tài khoản hoặc mật khẩu không chính xác"; ;
+TC22;Đăng nhập;Chức năng;Đăng nhập với mật khẩu có ký tự không cho phép;Email: tester1@gmail.com, Mật khẩu: 1234^567;Hiển thị thông báo "Tài khoản hoặc mật khẩu không chính xác"; ;
+```
+
+=== [Generated on 2025-07-01 22:27:29] ===
+```
+ID;Chức năng;Loại test case;Mô tả;Dữ liệu test;Kỳ vọng;Thực tế;Kết quả
+TC01;Đăng nhập;UI;Kiểm tra ngôn ngữ hiển thị;;"Ngôn ngữ hiển thị là Tiếng Việt";;
+TC02;Đăng nhập;UI;Kiểm tra liên kết "Quên mật khẩu";;"Hiển thị liên kết 'Quên mật khẩu' và hoạt động chính xác";;
+TC03;Đăng nhập;UI;Kiểm tra màu nền nút "Đăng nhập";;"Nút 'Đăng nhập' có màu nền rgb(52, 116, 212)";;
+TC04;Đăng nhập;UI;Kiểm tra màu nền nút "Đăng ký";;"Nút 'Đăng ký' có màu nền rgb(85, 85, 85)";;
+TC05;Đăng nhập;UI;Kiểm tra ô textbox Email;;"Ô textbox Email cho phép click và nhập dữ liệu";;
+TC06;Đăng nhập;UI;Kiểm tra placeholder ô textbox Email;;"Placeholder của ô textbox Email là 'Nhập email của bạn'";;
+TC07;Đăng nhập;UI;Kiểm tra ô textbox Mật khẩu;;"Ô textbox Mật khẩu cho phép click và nhập dữ liệu";;
+TC08;Đăng nhập;UI;Kiểm tra placeholder ô textbox Mật khẩu;;"Placeholder của ô textbox Mật khẩu là 'Nhập mật khẩu của bạn'";;
+TC09;Đăng nhập;UI;Kiểm tra mật khẩu được mã hóa;;"Mật khẩu được mã hóa bằng kí tự '*'";;
+TC10;Đăng nhập;Chức năng;Đăng nhập với Email và mật khẩu hợp lệ;Email:tester1@gmail.com,Mật khẩu:123456;"Đăng nhập thành công và chuyển hướng đến trang chủ";;
+TC11;Đăng nhập;Chức năng;Đăng nhập với Email và mật khẩu không hợp lệ;Email:tester1@gmail.com,Mật khẩu:1234567;"Hiển thị thông báo 'Tài khoản hoặc mật khẩu không chính xác'";;
+TC12;Đăng nhập;Chức năng;Đăng nhập với Email đã bị khóa;Email:tester2@gmail.com,Mật khẩu:12345678;"Hiển thị thông báo 'Tài khoản của bạn đã bị khóa'";;
+TC13;Đăng nhập;Chức năng;Đăng nhập với Email không đúng định dạng;Email:tester1gmail.com,Mật khẩu:123456;"Hiển thị thông báo 'Vui lòng nhập đúng định dạng Email'";;
+TC14;Đăng nhập;Chức năng;Đăng nhập với Email để trống;Email:,Mật khẩu:123456;"Hiển thị thông báo 'Vui lòng không để trống Email'";;
+TC15;Đăng nhập;Chức năng;Đăng nhập với Mật khẩu để trống;Email:tester1@gmail.com,Mật khẩu:;"Hiển thị thông báo 'Vui lòng không để trống mật khẩu'";;
+TC16;Đăng nhập;Chức năng;Đăng nhập với Email và mật khẩu để trống;Email:,Mật khẩu:;"Hiển thị thông báo 'Vui lòng không để trống Email' và 'Vui lòng không để trống mật khẩu'";;
+TC17;Đăng nhập;Chức năng;Kiểm tra các ký tự được phép nhập trong ô Mật khẩu;Email: tester1@gmail.com,Mật khẩu: abcdefg1234567890@#$%*;;"Chấp nhận các kí tự 0-9, a-z, A-Z, @ # $ % * ";;
+TC18;Đăng nhập;Chức năng;Kiểm tra giới hạn ký tự được phép nhập trong ô Mật khẩu;Email: tester1@gmail.com,Mật khẩu: abcdefg1234567890@#$%*!;"Chặn không cho nhập các kí tự không cho phép (!)";;
+TC19;Đăng nhập;Chức năng;Đăng nhập với Email không tồn tại;Email:tester4@gmail.com,Mật khẩu:123456;"Hiển thị thông báo 'Tài khoản hoặc mật khẩu không chính xác'";;
+```
+
+=== [Generated on 2025-07-01 22:40:15] ===
+```
+ID;Chức năng;Loại test case;Mô tả;Dữ liệu test;Kỳ vọng;Thực tế;Kết quả
+TC01;Đăng nhập;UI;Kiểm tra ngôn ngữ hiển thị;;"Ngôn ngữ hiển thị là tiếng Việt";;
+TC02;Đăng nhập;UI;Kiểm tra liên kết "Quên mật khẩu";;"Có hiển thị liên kết ""Quên mật khẩu""";;
+TC03;Đăng nhập;UI;Kiểm tra màu nền nút "Đăng nhập";;"Nút ""Đăng nhập"" có màu nền rgb(52, 116, 212)";;
+TC04;Đăng nhập;UI;Kiểm tra màu nền nút "Đăng ký";;"Nút ""Đăng ký"" có màu nền rgb(85, 85, 85)";;
+TC05;Đăng nhập;UI;Kiểm tra ô nhập Email - Cho phép click;;"Ô nhập Email cho phép click vào để nhập liệu";;
+TC06;Đăng nhập;UI;Kiểm tra ô nhập Email - Placeholder;;"Ô nhập Email có placeholder ""Nhập email của bạn""";;
+TC07;Đăng nhập;UI;Kiểm tra ô nhập Mật khẩu - Cho phép click;;"Ô nhập Mật khẩu cho phép click vào để nhập liệu";;
+TC08;Đăng nhập;UI;Kiểm tra ô nhập Mật khẩu - Placeholder;;"Ô nhập Mật khẩu có placeholder ""Nhập mật khẩu của bạn""";;
+TC09;Đăng nhập;UI;Kiểm tra ô nhập Mật khẩu - Mã hóa kí tự;;"Mật khẩu được mã hóa bằng kí tự ""*""";;
+TC10;Đăng nhập;Chức năng;Đăng nhập với Email và Mật khẩu hợp lệ;Email: tester1@gmail.com, Mật khẩu: 123456;"Đăng nhập thành công";;
+TC11;Đăng nhập;Chức năng;Đăng nhập với Email hợp lệ, Mật khẩu không hợp lệ;Email: tester1@gmail.com, Mật khẩu: sai_password;"Hiển thị thông báo ""Tài khoản hoặc mật khẩu không chính xác""";;
+TC12;Đăng nhập;Chức năng;Đăng nhập với Email không hợp lệ, Mật khẩu hợp lệ;Email: sai_email@gmail.com, Mật khẩu: 123456;"Hiển thị thông báo ""Tài khoản hoặc mật khẩu không chính xác""";;
+TC13;Đăng nhập;Chức năng;Đăng nhập với Email và Mật khẩu không hợp lệ;Email: sai_email@gmail.com, Mật khẩu: sai_password;"Hiển thị thông báo ""Tài khoản hoặc mật khẩu không chính xác""";;
+TC14;Đăng nhập;Chức năng;Đăng nhập với Email và Mật khẩu để trống;Email: , Mật khẩu: ;"Hiển thị thông báo ""Vui lòng không để trống Email"", ""Vui lòng không để trống mật khẩu""";;
+TC15;Đăng nhập;Chức năng;Đăng nhập với Email để trống, Mật khẩu hợp lệ;Email: , Mật khẩu: 123456;"Hiển thị thông báo ""Vui lòng không để trống Email""";;
+TC16;Đăng nhập;Chức năng;Đăng nhập với Email hợp lệ, Mật khẩu để trống;Email: tester1@gmail.com, Mật khẩu: ;"Hiển thị thông báo ""Vui lòng không để trống mật khẩu""";;
+TC17;Đăng nhập;Chức năng;Đăng nhập với tài khoản bị khóa;Email: tester2@gmail.com, Mật khẩu: 12345678;"Hiển thị thông báo ""Tài khoản của bạn đã bị khóa""";;
+TC18;Đăng nhập;Chức năng;Đăng nhập với định dạng Email không hợp lệ;Email: tester1gmail.com, Mật khẩu: 123456;"Hiển thị thông báo ""Vui lòng nhập đúng định dạng Email""";;
+TC19;Đăng nhập;Chức năng;Đăng nhập với Email không tồn tại, Mật khẩu bất kỳ;Email: khongtontai@gmail.com, Mật khẩu: abcxyz;"Hiển thị thông báo ""Tài khoản hoặc mật khẩu không chính xác""";;
+TC20;Đăng nhập;Chức năng;Nhập ký tự đặc biệt không cho phép vào ô mật khẩu;Email: tester1@gmail.com, Mật khẩu: <script>alert('test');</script>;"Không cho phép nhập ký tự đặc biệt";;
+```
+
+=== [Generated on 2025-07-01 22:50:05] ===
+```
+ID;Chức năng;Loại test case;Mô tả;Dữ liệu test;Kỳ vọng;Thực tế;Kết quả
+TC01;Giỏ hàng;UI;Kiểm tra hiển thị các cột thông tin sản phẩm; ;Hiển thị đầy đủ các cột: Sản phẩm, Đơn giá, Số lượng, Tổng; ;
+TC02;Giỏ hàng;UI;Kiểm tra hiển thị tổng tiền; ;Hiển thị tổng tiền của giỏ hàng; ;
+TC03;Giỏ hàng;UI;Kiểm tra hiển thị button "Thanh toán"; ;Hiển thị button "Thanh toán" với text "Thanh toán"; ;
+TC04;Giỏ hàng;UI;Kiểm tra hiển thị liên kết "Tiếp tục mua sắm"; ;Hiển thị liên kết "Tiếp tục mua sắm" với text "Tiếp tục mua sắm"; ;
+TC05;Giỏ hàng;UI;Kiểm tra hiển thị button xóa sản phẩm; ;Hiển thị button xóa cho mỗi sản phẩm trong giỏ hàng; ;
+TC06;Giỏ hàng;UI;Kiểm tra ngôn ngữ hiển thị; ;Toàn bộ text hiển thị bằng tiếng Việt; ;
+TC07;Giỏ hàng;Chức năng;Kiểm tra tính năng thay đổi số lượng sản phẩm;Số lượng: 2;Số lượng sản phẩm được cập nhật thành 2; ;
+TC08;Giỏ hàng;Chức năng;Kiểm tra giá trị tối thiểu của số lượng sản phẩm;Số lượng: 0;Hiển thị thông báo lỗi và số lượng không được thay đổi; ;
+TC09;Giỏ hàng;Chức năng;Kiểm tra giá trị số lượng vượt quá số lượng tồn kho;Số lượng: 453;Hiển thị thông báo lỗi và số lượng không được thay đổi; ;
+TC10;Giỏ hàng;Chức năng;Kiểm tra tính toán tổng tiền cho một sản phẩm;Số lượng: 2;Tổng = Đơn giá * 2; ;
+TC11;Giỏ hàng;Chức năng;Kiểm tra tính toán tổng tiền của giỏ hàng; ;Tổng tiền = Tổng của tất cả các (Đơn giá * Số lượng); ;
+TC12;Giỏ hàng;Chức năng;Kiểm tra chức năng xóa sản phẩm khỏi giỏ hàng; ;Sản phẩm bị xóa khỏi giỏ hàng; ;
+TC13;Giỏ hàng;Chức năng;Kiểm tra chuyển hướng khi click vào button "Thanh toán"; ;Chuyển hướng đến trang thanh toán; ;
+TC14;Giỏ hàng;Chức năng;Kiểm tra chuyển hướng khi click vào liên kết "Tiếp tục mua sắm"; ;Chuyển hướng đến trang sản phẩm hoặc trang chủ; ;
+TC15;Giỏ hàng;Chức năng;Kiểm tra số lượng khi nhập giá trị không hợp lệ;Số lượng: abc;Hiển thị thông báo lỗi và số lượng không được thay đổi; ;
+TC16;Giỏ hàng;Chức năng;Kiểm tra số lượng khi nhập giá trị là số âm;Số lượng: -1;Hiển thị thông báo lỗi và số lượng không được thay đổi; ;
+```
+
+=== [Generated on 2025-07-02 20:20:02] ===
+```
+ID;Chức năng;Loại test case;Mô tả;Dữ liệu test;Kỳ vọng;Thực tế;Kết quả
+TC01;Tìm kiếm sản phẩm;UI;Kiểm tra sự tồn tại của ô tìm kiếm;;"Ô tìm kiếm hiển thị trên trang";;
+TC02;Tìm kiếm sản phẩm;UI;Kiểm tra placeholder của ô tìm kiếm;;"Placeholder hiển thị là 'Tìm kiếm sản phẩm'";;
+TC03;Tìm kiếm sản phẩm;UI;Kiểm tra sự tồn tại của button tìm kiếm;;"Button tìm kiếm hiển thị bên cạnh ô tìm kiếm";;
+TC04;Tìm kiếm sản phẩm;UI;Kiểm tra ngôn ngữ hiển thị của placeholder;;"Placeholder hiển thị bằng tiếng Việt";;
+TC05;Tìm kiếm sản phẩm;UI;Kiểm tra ngôn ngữ hiển thị của button tìm kiếm (nếu có text);;"Button tìm kiếm hiển thị bằng tiếng Việt";;
+TC06;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với keyword có trong danh sách sản phẩm;Từ khóa: Life;"Danh sách sản phẩm chứa 'Life' hiển thị";;
+TC07;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với keyword không có trong danh sách sản phẩm;Từ khóa: zzxy;"Danh sách sản phẩm không hiển thị, button 'Xem thêm' hiển thị";;
+TC08;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với keyword có ký tự đặc biệt;Từ khóa: @#$;"Không có sản phẩm hiển thị, button 'Xem thêm' hiển thị";;
+TC09;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với keyword là số;Từ khóa: 123;"Không có sản phẩm hiển thị, button 'Xem thêm' hiển thị (hoặc hiển thị sản phẩm nếu có)";;
+TC10;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với keyword là khoảng trắng;"Danh sách sản phẩm không hiển thị, button 'Xem thêm' hiển thị (hoặc hiển thị toàn bộ sản phẩm)";;
+TC11;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với keyword là chữ hoa chữ thường lẫn lộn;Từ khóa: lIfE;"Danh sách sản phẩm chứa 'Life' hiển thị";;
+TC12;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm bằng cách nhập keyword và bấm Enter;Từ khóa: Life;"Danh sách sản phẩm chứa 'Life' hiển thị";;
+TC13;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm bằng cách nhập keyword và bấm button Tìm kiếm;Từ khóa: Life;"Danh sách sản phẩm chứa 'Life' hiển thị";;
+TC14;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với keyword dài;Từ khóa: ThisIsAVeryLongKeywordThatDoesNotExist;"Danh sách sản phẩm không hiển thị, button 'Xem thêm' hiển thị";;
+TC15;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với keyword là tiếng Việt có dấu;Từ khóa: Áo dài;"Hiển thị sản phẩm liên quan đến 'Áo dài' (nếu có)";;
+TC16;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với keyword chứa cả chữ và số;Từ khóa: Life123;"Không có sản phẩm hiển thị, button 'Xem thêm' hiển thị (hoặc hiển thị sản phẩm nếu có)";;
+TC17;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với keyword là khoảng trắng ở đầu và cuối;Từ khóa:  Life  ;"Danh sách sản phẩm chứa 'Life' hiển thị";;
+```
+
+=== [Generated on 2025-07-02 20:58:12] ===
+```
+ID;Chức năng;Loại test case;Mô tả;Dữ liệu test;Kỳ vọng;Thực tế;Kết quả
+TC01;Tìm kiếm sản phẩm;UI;Kiểm tra placeholder của ô tìm kiếm;;"Placeholder hiển thị là 'Tìm kiếm sản phẩm'";;;
+TC02;Tìm kiếm sản phẩm;UI;Kiểm tra sự tồn tại của button tìm kiếm;;"Có button tìm kiếm bên cạnh ô tìm kiếm";;;
+TC03;Tìm kiếm sản phẩm;UI;Kiểm tra ngôn ngữ hiển thị của placeholder;;"Placeholder hiển thị bằng tiếng Việt";;;
+TC04;Tìm kiếm sản phẩm;UI;Kiểm tra khả năng nhập liệu vào ô tìm kiếm;;"Ô tìm kiếm cho phép nhập liệu";;;
+TC05;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với từ khóa hợp lệ (Life) bằng button tìm kiếm;Từ khóa: Life;"Danh sách sản phẩm chứa từ 'Life' hiển thị";;;
+TC06;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với từ khóa không hợp lệ (zzxy) bằng button tìm kiếm;Từ khóa: zzxy;"Chỉ hiển thị button 'Xem thêm'";;;
+TC07;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với từ khóa hợp lệ (Life) bằng phím Enter;Từ khóa: Life;"Danh sách sản phẩm chứa từ 'Life' hiển thị";;;
+TC08;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với từ khóa không hợp lệ (zzxy) bằng phím Enter;Từ khóa: zzxy;"Chỉ hiển thị button 'Xem thêm'";;;
+TC09;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với từ khóa là ký tự đặc biệt;Từ khóa: !@#$;"Kết quả tìm kiếm phù hợp (có thể không có sản phẩm)";;;
+TC10;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với từ khóa là số;Từ khóa: 123;"Kết quả tìm kiếm phù hợp (có thể không có sản phẩm)";;;
+TC11;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với từ khóa là chữ hoa, chữ thường lẫn lộn (LiFe);Từ khóa: LiFe;"Danh sách sản phẩm chứa từ 'Life' hiển thị";;;
+TC12;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với từ khóa là khoảng trắng;Từ khóa:  ;"Không có sản phẩm nào được hiển thị hoặc thông báo lỗi";;;
+TC13;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với từ khóa dài hơn độ dài cho phép của ô tìm kiếm;Từ khóa: ThisIsAVeryLongKeywordThatExceedsTheMaximumLengthAllowed;"Kết quả tìm kiếm phù hợp (có thể không có sản phẩm) hoặc thông báo lỗi";;;
+```
+
+=== [Generated on 2025-07-02 21:02:09] ===
+```
+ID;Chức năng;Loại test case;Mô tả;Dữ liệu test;Kỳ vọng;Thực tế;Kết quả
+TC01;Tìm kiếm sản phẩm;UI;Kiểm tra hiển thị của ô tìm kiếm;;"Ô tìm kiếm hiển thị đúng vị trí trên trang, có placeholder 'Tìm kiếm sản phẩm'";;;
+TC02;Tìm kiếm sản phẩm;UI;Kiểm tra placeholder của ô tìm kiếm;;"Placeholder hiển thị đúng chữ 'Tìm kiếm sản phẩm' bằng tiếng Việt";;;
+TC03;Tìm kiếm sản phẩm;UI;Kiểm tra hiển thị của button tìm kiếm;;"Button tìm kiếm hiển thị trong ô tìm kiếm";;;
+TC04;Tìm kiếm sản phẩm;UI;Kiểm tra ô tìm kiếm cho phép nhập liệu;;"Ô tìm kiếm cho phép nhập bất kỳ ký tự nào";;;
+TC05;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với từ khóa có trong danh sách sản phẩm (Life);Từ khóa: Life;Danh sách sản phẩm chứa từ khóa 'Life' hiển thị; ;
+TC06;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với từ khóa không có trong danh sách sản phẩm (zzxy);Từ khóa: zzxy;Danh sách sản phẩm không hiển thị và chỉ có button 'Xem thêm' hiển thị; ;
+TC07;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với từ khóa có trong danh sách sản phẩm bằng phím Enter (Life);Từ khóa: Life;Danh sách sản phẩm chứa từ khóa 'Life' hiển thị; ;
+TC08;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với từ khóa không có trong danh sách sản phẩm bằng phím Enter (zzxy);Từ khóa: zzxy;Danh sách sản phẩm không hiển thị và chỉ có button 'Xem thêm' hiển thị; ;
+TC09;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với từ khóa là khoảng trắng;Từ khóa:  ;Danh sách sản phẩm mặc định của trang web hiển thị; ;
+TC10;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với từ khóa là ký tự đặc biệt;Từ khóa: @#$;Không có sản phẩm nào được hiển thị và chỉ có button 'Xem thêm' hiển thị; ;
+TC11;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với từ khóa là số;Từ khóa: 123;Không có sản phẩm nào được hiển thị và chỉ có button 'Xem thêm' hiển thị; ;
+TC12;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với từ khóa là chữ hoa chữ thường lẫn lộn;Từ khóa: lIfe;Danh sách sản phẩm chứa từ khóa 'Life' hiển thị; ;
+```
+
+=== [Generated on 2025-07-02 21:07:11] ===
+
+
+=== [Generated on 2025-07-02 21:07:32] ===
+```
+ID;Chức năng;Loại test case;Mô tả;Dữ liệu test;Kỳ vọng;Thực tế;Kết quả
+TC01;Tìm kiếm sản phẩm;UI;Kiểm tra placeholder của ô tìm kiếm;;Placeholder hiển thị chính xác là "Tìm kiếm sản phẩm";;
+TC02;Tìm kiếm sản phẩm;UI;Kiểm tra sự tồn tại của button tìm kiếm;;Có button tìm kiếm nằm cạnh ô tìm kiếm;;
+TC03;Tìm kiếm sản phẩm;UI;Kiểm tra ngôn ngữ hiển thị của placeholder;;Placeholder hiển thị bằng tiếng Việt;;
+TC04;Tìm kiếm sản phẩm;UI;Kiểm tra khả năng nhập liệu của ô tìm kiếm;;Ô tìm kiếm cho phép nhập liệu;;
+TC05;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với keyword hợp lệ (Life);Từ khóa: Life;Danh sách sản phẩm chứa keyword "Life" hiển thị;;
+TC06;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với keyword không hợp lệ (zzxy);Từ khóa: zzxy;Chỉ hiển thị button "Xem thêm", không hiển thị danh sách sản phẩm;;
+TC07;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với keyword hợp lệ và nhấn Enter;Từ khóa: Life;Danh sách sản phẩm chứa keyword "Life" hiển thị;;
+TC08;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với keyword không hợp lệ và nhấn Enter;Từ khóa: zzxy;Chỉ hiển thị button "Xem thêm", không hiển thị danh sách sản phẩm;;
+TC09;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với keyword là ký tự đặc biệt;Từ khóa: @#$;Kết quả tìm kiếm trả về tương ứng (có thể là không tìm thấy);;
+TC10;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với keyword là số;Từ khóa: 123;Kết quả tìm kiếm trả về tương ứng (có thể là không tìm thấy);;
+TC11;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với keyword là chữ hoa chữ thường lẫn lộn (LiFe);Từ khóa: LiFe;Danh sách sản phẩm chứa keyword "Life" hiển thị;;
+TC12;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với keyword chứa khoảng trắng ở đầu và cuối (  Life  );Từ khóa:   Life  ;Danh sách sản phẩm chứa keyword "Life" hiển thị;;
+```
+
+=== [Generated on 2025-07-02 21:40:29] ===
+```
+ID;Chức năng;Loại test case;Mô tả;Dữ liệu test;Kỳ vọng;Thực tế;Kết quả
+TC01;Tìm kiếm sản phẩm;UI;Kiểm tra sự hiển thị của ô tìm kiếm;;"Ô tìm kiếm hiển thị, placeholder là 'Tìm kiếm sản phẩm'";;;
+TC02;Tìm kiếm sản phẩm;UI;Kiểm tra sự hiển thị của button tìm kiếm;;"Button tìm kiếm hiển thị";;;
+TC03;Tìm kiếm sản phẩm;UI;Kiểm tra placeholder của ô tìm kiếm;;"Placeholder trong ô tìm kiếm là 'Tìm kiếm sản phẩm'";;;
+TC04;Tìm kiếm sản phẩm;UI;Kiểm tra ngôn ngữ hiển thị của placeholder;;"Placeholder hiển thị bằng tiếng Việt";;;
+TC05;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với từ khóa có trong danh sách sản phẩm (Life);Từ khóa: Life;"Danh sách sản phẩm chứa 'Life' hiển thị";;;
+TC06;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với từ khóa không có trong danh sách sản phẩm (zzxy);Từ khóa: zzxy;"Danh sách sản phẩm không hiển thị, button 'Xem thêm' hiển thị";;;
+TC07;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với từ khóa có khoảng trắng ở đầu (  Life);Từ khóa:   Life;"Danh sách sản phẩm chứa 'Life' hiển thị";;;
+TC08;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với từ khóa có khoảng trắng ở cuối (Life  );Từ khóa: Life  ;"Danh sách sản phẩm chứa 'Life' hiển thị";;;
+TC09;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với từ khóa có cả khoảng trắng đầu và cuối (  Life  );Từ khóa:   Life  ;"Danh sách sản phẩm chứa 'Life' hiển thị";;;
+TC10;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với từ khóa là chữ thường (life);Từ khóa: life;"Danh sách sản phẩm chứa 'Life' hiển thị";;;
+TC11;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với từ khóa là chữ hoa (LIFE);Từ khóa: LIFE;"Danh sách sản phẩm chứa 'Life' hiển thị";;;
+TC12;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm bằng cách nhấn Enter;Từ khóa: Life;"Danh sách sản phẩm chứa 'Life' hiển thị";;;
+TC13;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm bằng cách nhấn nút tìm kiếm;Từ khóa: Life;"Danh sách sản phẩm chứa 'Life' hiển thị";;;
+TC14;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với từ khóa là ký tự đặc biệt (!@#);Từ khóa: !@#;"Danh sách sản phẩm không hiển thị, button 'Xem thêm' hiển thị";;;
+TC15;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với từ khóa là số (12345);Từ khóa: 12345;"Danh sách sản phẩm không hiển thị, button 'Xem thêm' hiển thị";;;
+TC16;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với từ khóa là ký tự in hoa và số (LIFE123);Từ khóa: LIFE123;"Danh sách sản phẩm không hiển thị, button 'Xem thêm' hiển thị";;;
+TC17;Tìm kiếm sản phẩm;Chức năng;Tìm kiếm với từ khóa trống;Từ khóa: ;"Danh sách sản phẩm không hiển thị, button 'Xem thêm' hiển thị";;;
+```

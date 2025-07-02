@@ -12,9 +12,9 @@ UI_TEST_HANDLERS = [
     (r"mật khẩu.*(mã hóa|ẩn|hiển thị dạng \*)", lambda page, case: check_password_masked(page)),
 
     (r"placeholder.*ô tìm kiếm", lambda page, case: check_placeholder(page, "search")),
-    (r"hiển thị.*ô tìm kiếm", lambda page, case: check_search_box_visible(page)),
-    (r"hiển thị.*button tìm kiếm", lambda page, case: check_search_button_visible(page)),
-    (r"nhập.*ô tìm kiếm", lambda page, case: check_search_input_allows_all_characters(page)),
+    (r"(hiển thị|tồn tại).*ô tìm kiếm", lambda page, case: check_search_box_visible(page)),
+    (r"(hiển thị|tồn tại).*button tìm kiếm", lambda page, case: check_search_button_visible(page)),
+    (r"(ô tìm kiếm.*nhập|nhập.*ô tìm kiếm)", lambda page, case: check_search_input_allows_all_characters(page)),
 
     (r"hiển thị đơn giá", lambda page, case: check_price_display(page), lambda tc: tc["Chức năng"] == "Xem chi tiết sản phẩm"),
     (r"hiển thị số lượng", lambda page, case: check_quantity_display(page), lambda tc: tc["Chức năng"] == "Xem chi tiết sản phẩm"),
@@ -24,12 +24,12 @@ UI_TEST_HANDLERS = [
     (r"hiển thị ô chọn phân loại", lambda page, case: check_variant_selector(page), lambda tc: tc["Chức năng"] == "Xem chi tiết sản phẩm"),
     (r"ngôn ngữ hiển thị", lambda page, case: check_page_language(page), lambda tc: tc["Chức năng"] == "Xem chi tiết sản phẩm"),
 
-    (r"hiển thị giao diện chung trang giỏ hàng", lambda page, case: check_cart_layout(page), lambda tc: tc["Chức năng"] == "Giỏ hàng"),
+    (r"hiển thị.*(giao diện chung trang giỏ hàng|các cột)", lambda page, case: check_cart_layout(page), lambda tc: tc["Chức năng"] == "Giỏ hàng"),
     (r"hiển thị thông tin sản phẩm.*giỏ hàng", lambda page, case: check_cart_product_info(page), lambda tc: tc["Chức năng"] == "Giỏ hàng"),
     (r"hiển thị đơn giá sản phẩm", lambda page, case: check_cart_product_price(page), lambda tc: tc["Chức năng"] == "Giỏ hàng"),
     (r"hiển thị số lượng sản phẩm", lambda page, case: check_cart_product_quantity(page), lambda tc: tc["Chức năng"] == "Giỏ hàng"),
-    (r"hiển thị tổng tiền của từng sản phẩm", lambda page, case: check_cart_product_total(page), lambda tc: tc["Chức năng"] == "Giỏ hàng"),
-    (r"hiển thị tổng tiền của giỏ hàng", lambda page, case: check_cart_grand_total(page), lambda tc: tc["Chức năng"] == "Giỏ hàng"),
+    (r"hiển thị tổng tiền. *của từng sản phẩm", lambda page, case: check_cart_product_total(page), lambda tc: tc["Chức năng"] == "Giỏ hàng"),
+    (r"hiển thị tổng tiền", lambda page, case: check_cart_grand_total(page), lambda tc: tc["Chức năng"] == "Giỏ hàng"),
     (r"hiển thị button.*thanh toán", lambda page, case: check_cart_checkout_button(page), lambda tc: tc["Chức năng"] == "Giỏ hàng"),
     (r"hiển thị button.*xóa", lambda page, case: check_cart_remove_button(page), lambda tc: tc["Chức năng"] == "Giỏ hàng"),
 

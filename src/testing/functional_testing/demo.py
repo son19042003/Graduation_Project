@@ -5,9 +5,9 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-search_cases = [tc for tc in read_test_cases("Search") if tc["Loại test case"] == "Chức năng"]
+demo_cases = [tc for tc in read_test_cases("Demo") if tc["Loại test case"] == "Chức năng"]
 
-@pytest.mark.parametrize("test_case", search_cases)
+@pytest.mark.parametrize("test_case", demo_cases)
 def test_search(driver, test_case, caplog):
     with caplog.at_level(logging.INFO):
         row_number = test_case['_row']
@@ -34,11 +34,22 @@ def test_search(driver, test_case, caplog):
             result = 'Fail'
             actual = ''
 
-            if page.is_numeric(keyword) and (product_exist or load_more):
-                actual = "Cho phép tìm kiếm với ký tự số"
+            keyword = page.extract_keyword(test_case['Dữ liệu test'])
+            print(f"[DEBUG] Keyword: '{keyword}'")
+            print(f"[DEBUG] is_special_character: {page.is_special_character(keyword)}")
+            print(f"[DEBUG] is_numeric: {page.is_numeric(keyword)}")
+            print(f"[DEBUG] is_whitespace: {page.is_whitespace(keyword)}")
+            if page.is_numeric(keyword):
+                if product_exist or load_more:
+                    actual = "Hệ thống cho phép tìm kiếm với ký tự số, có kết quả trả về"
+                else:
+                    actual = "Hệ thống xử lý từ khóa số nhưng không tìm thấy sản phẩm"
                 result = "Pass"
-            elif page.is_special_character(keyword) and (product_exist or load_more):
-                actual = "Cho phép tìm kiếm với ký tự đặc biệt"
+            elif page.is_special_character(keyword):
+                if product_exist or load_more:
+                    actual = "Hệ thống cho phép tìm kiếm với ký tự đặc biệt, có kết quả trả về"
+                else:
+                    actual = "Hệ thống xử lý từ khóa đặc biệt nhưng không tìm thấy sản phẩm"
                 result = "Pass"
             elif page.is_whitespace(keyword):
                 if product_exist:
@@ -61,7 +72,7 @@ def test_search(driver, test_case, caplog):
 
             logger.info(f"TC: {test_case['ID']} - {test_case['Mô tả']}: {actual} - {result}")
             if row_number:
-                write_test_result("Search", row_number, actual, result)
+                write_test_result("Demo", row_number, actual, result)
 
         except Exception as e:
             pytest.fail(f"Lỗi test case {test_case['ID']}: {str(e)}")

@@ -8,7 +8,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-cart_test_cases = [tc for tc in read_test_cases('Cart') if tc["Loại test case"] == "Chức năng"]
+cart_test_cases = [tc for tc in read_test_cases('Demo2') if tc["Loại test case"] == "Chức năng"]
 
 @pytest.fixture(scope="function", autouse=True)
 def login_before_cart_test(driver):
@@ -41,9 +41,9 @@ def test_cart(driver, test_case, caplog):
 
             logger.info(f"TC: {test_case.get('ID')} - {test_case.get('Mô tả')}: {action_result} - {result}")
 
-            write_test_result('Cart', row_number, action_result, result)
+            write_test_result('Demo2', row_number, action_result, result)
 
         except Exception as e:
             if row_number is not None:
-                write_test_result('Cart', row_number, str(e), 'Fail')
+                write_test_result('Demo2', row_number, str(e), 'Fail')
             pytest.fail(f"Lỗi test case: {str(e)}")

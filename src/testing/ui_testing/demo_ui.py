@@ -17,10 +17,8 @@ def run_test_case_ui(page, test_case):
     desc = test_case["Mô tả"].lower()
     expected = normalize_text(test_case["Kỳ vọng"].strip('" '))
 
-    for pattern, handler, *condition in UI_TEST_HANDLERS:
+    for pattern, handler in UI_TEST_HANDLERS:
         if re.search(pattern, desc):
-            if condition and not condition[0](test_case):
-                continue
             actual_raw = handler(page, test_case)
             actual = normalize_text(actual_raw)
                 
@@ -34,20 +32,20 @@ def run_test_case_ui(page, test_case):
 
 logger = logging.getLogger(__name__)
 
-detail_ui_cases = [tc for tc in read_test_cases('Detail') if tc["Loại test case"] == "UI"]
-@pytest.mark.parametrize("test_case", detail_ui_cases)
+ui_test_cases = [tc for tc in read_test_cases('Demo') if tc["Loại test case"] == "UI"]
+@pytest.mark.parametrize("test_case", ui_test_cases)
 def test_ui_login(test_case, caplog):
     with caplog.at_level(logging.INFO):
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=False)
             page = browser.new_page()
-            page.goto('http://localhost/ecommerce/product/street-life-mens-frayed-hem-denim-shorts-with-pockets-65f99c45d0916-105')
+            page.goto('http://localhost/ecommerce')
             
             actual, result = run_test_case_ui(page, test_case)
             logger.info(f"{test_case['ID']} - {test_case['Mô tả']}: {actual} - {result}")
 
             write_test_result(
-                sheet_name="Detail",
+                sheet_name="Demo",
                 row_number=test_case["_row"],
                 actual=actual,
                 result=result

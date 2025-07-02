@@ -4,6 +4,9 @@ from src.testing.pages.selenium.checkout_page import CheckoutPage
 from src.testing.pages.selenium.login_page import LoginPage
 from src.testing.pages.selenium.utils import *
 from src.testing.excel_reader import read_test_cases, write_test_result
+import logging
+
+logger = logging.getLogger(__name__)
 
 checkout_test_cases = [tc for tc in read_test_cases('Payment') if tc["Loại test case"] == "Chức năng"]
 
@@ -20,25 +23,26 @@ def login_before_checkout_test(driver):
     dismiss_password_warning(driver)
 
 @pytest.mark.parametrize('test_case', checkout_test_cases)
-def test_cart(driver, test_case):
-    row_number = test_case['_row']
-    page = CheckoutPage(driver)
+def test_cart(driver, test_case, caplog):
+    with caplog.at_level(logging.INFO):
+        row_number = test_case['_row']
+        page = CheckoutPage(driver)
 
-    try:
-        page.load()
-        action_result = page.perform_action(driver, test_case)
-        expected = test_case["Kỳ vọng"]
-        
-        if normalize(expected) in normalize(action_result) or normalize(action_result) in normalize(expected):
-            result = "Pass"
-            action_result = expected
-        else:
-            result = "Fail"
+        try:
+            page.load()
+            action_result = page.perform_action(driver, test_case)
+            expected = test_case["Kỳ vọng"]
+            
+            if normalize(expected) in normalize(action_result) or normalize(action_result) in normalize(expected):
+                result = "Pass"
+                action_result = expected
+            else:
+                result = "Fail"
 
-        print(f"{test_case['ID']} - {test_case['Mô tả']}: {action_result} - {result}")
-        write_test_result('Payment', row_number, action_result, result)
+            logger.info(f"{test_case['ID']} - {test_case['Mô tả']}: {action_result} - {result}")
+            write_test_result('Payment', row_number, action_result, result)
 
-    except Exception as e:
-        if row_number is not None:
-            write_test_result('Payment', row_number, str(e), 'Fail')
-        pytest.fail(f"Lỗi test case: {str(e)}")
+        except Exception as e:
+            if row_number is not None:
+                write_test_result('Payment', row_number, str(e), 'Fail')
+            pytest.fail(f"Lỗi test case: {str(e)}")

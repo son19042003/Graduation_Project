@@ -3,6 +3,7 @@ from playwright.sync_api import sync_playwright
 from src.testing.excel_reader import read_test_cases, write_test_result
 from ui_test_handlers import UI_TEST_HANDLERS
 import re
+import logging
 
 def normalize_text(text):
     text = text.strip()
@@ -32,29 +33,32 @@ def run_test_case_ui(page, test_case):
             return actual, result
     return "Không hỗ trợ mô tả", "Skip"
 
+logger = logging.getLogger(__name__)
+
 cart_ui_cases = [tc for tc in read_test_cases('Cart') if tc["Loại test case"] == "UI"]
 @pytest.mark.parametrize("test_case", cart_ui_cases)
-def test_ui_login(test_case):
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
-        page = browser.new_page()
+def test_ui_login(test_case, caplog):
+    with caplog.at_level(logging.INFO):
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=False)
+            page = browser.new_page()
 
-        page.goto("http://localhost/ecommerce/login")
-        page.fill("input[name='email']", "tester1@gmail.com")
-        page.fill("input[name='password']", "123456")
-        page.click("button.btn.btn-primary")
+            page.goto("http://localhost/ecommerce/login")
+            page.fill("input[name='email']", "tester1@gmail.com")
+            page.fill("input[name='password']", "123456")
+            page.click("button.btn.btn-primary")
 
-        page.wait_for_load_state("networkidle")
-        page.goto('http://localhost/ecommerce/cart')
-        
-        actual, result = run_test_case_ui(page, test_case)
-        print(f"{test_case['ID']} - {test_case['Mô tả']}: {actual} - {result}")
+            page.wait_for_load_state("networkidle")
+            page.goto('http://localhost/ecommerce/cart')
+            
+            actual, result = run_test_case_ui(page, test_case)
+            logger.info(f"{test_case['ID']} - {test_case['Mô tả']}: {actual} - {result}")
 
-        write_test_result(
-            sheet_name="Cart",
-            row_number=test_case["_row"],
-            actual=actual,
-            result=result
-        )
+            write_test_result(
+                sheet_name="Cart",
+                row_number=test_case["_row"],
+                actual=actual,
+                result=result
+            )
 
-        browser.close()
+            browser.close()

@@ -14,7 +14,7 @@ class SearchPage:
         self.driver.get(self.url)
 
     def extract_keyword(self, data):
-        match = re.search(r"Từ khóa:\s*(.*)\"", data)
+        match = re.search(r"Từ khóa:\s*(.+)", data)
         return match.group(1).strip() if match else ''
 
     def enter_keyword(self, keyword):

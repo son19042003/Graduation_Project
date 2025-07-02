@@ -1,0 +1,43 @@
+
+=== [Generated on 2025-07-02 21:50:22] ===
+```
+ID;Chức năng;Loại test case;Mô tả;Dữ liệu test;Kỳ vọng;Thực tế;Kết quả
+TC01;Giỏ hàng;UI;Kiểm tra hiển thị giao diện trang giỏ hàng;;"Hiển thị đầy đủ các thành phần: Sản phẩm, Đơn giá, Số lượng, Tổng, Tổng tiền, Button Thanh toán, Liên kết Tiếp tục mua sắm, Button Xóa";;
+TC02;Giỏ hàng;UI;Kiểm tra ngôn ngữ hiển thị trên trang giỏ hàng;;"Toàn bộ nội dung hiển thị bằng tiếng Việt";;
+TC03;Giỏ hàng;UI;Kiểm tra hiển thị thông tin sản phẩm trong giỏ hàng;;"Thông tin sản phẩm (tên, hình ảnh nếu có) hiển thị đầy đủ và chính xác";;
+TC04;Giỏ hàng;UI;Kiểm tra hiển thị đơn giá sản phẩm;;"Đơn giá sản phẩm hiển thị đúng định dạng và đơn vị tiền tệ";;
+TC05;Giỏ hàng;UI;Kiểm tra hiển thị số lượng sản phẩm;;"Số lượng sản phẩm hiển thị đúng và có thể điều chỉnh";;
+TC06;Giỏ hàng;UI;Kiểm tra hiển thị tổng tiền của mỗi sản phẩm;;"Tổng tiền của mỗi sản phẩm hiển thị chính xác (Đơn giá * Số lượng)";;
+TC07;Giỏ hàng;UI;Kiểm tra hiển thị tổng tiền của giỏ hàng;;"Tổng tiền của giỏ hàng hiển thị chính xác (tổng của tất cả tổng tiền sản phẩm)";;
+TC08;Giỏ hàng;UI;Kiểm tra hiển thị button "Thanh toán";;"Button 'Thanh toán' hiển thị rõ ràng và dễ thao tác";;
+TC09;Giỏ hàng;UI;Kiểm tra hiển thị liên kết "Tiếp tục mua sắm";;"Liên kết 'Tiếp tục mua sắm' hiển thị rõ ràng và dễ thao tác";;
+TC10;Giỏ hàng;UI;Kiểm tra hiển thị button "Xóa";;"Button 'Xóa' hiển thị rõ ràng và dễ thao tác cho từng sản phẩm";;
+TC11;Giỏ hàng;Chức năng;Kiểm tra tính năng thay đổi số lượng sản phẩm;Số lượng: 2;;"Số lượng sản phẩm thay đổi thành công và tổng tiền tương ứng được cập nhật";;
+TC12;Giỏ hàng;Chức năng;Kiểm tra tính năng thay đổi số lượng sản phẩm thành 1;Số lượng: 1;;"Số lượng sản phẩm thay đổi thành công và tổng tiền tương ứng được cập nhật";;
+TC13;Giỏ hàng;Chức năng;Kiểm tra tính năng thay đổi số lượng sản phẩm vượt quá số lượng tồn kho;Số lượng: 453;;"Thông báo lỗi hiển thị và số lượng sản phẩm không thay đổi";;
+TC14;Giỏ hàng;Chức năng;Kiểm tra tính năng xóa sản phẩm khỏi giỏ hàng;;"Sản phẩm bị xóa khỏi giỏ hàng thành công và tổng tiền được cập nhật";;
+TC15;Giỏ hàng;Chức năng;Kiểm tra tính năng thanh toán;;"Chuyển hướng đến trang thanh toán khi nhấn button 'Thanh toán'";;
+TC16;Giỏ hàng;Chức năng;Kiểm tra tính năng "Tiếp tục mua sắm";;"Chuyển hướng đến trang danh mục sản phẩm khi nhấn liên kết 'Tiếp tục mua sắm'";;
+```
+
+=== [Generated on 2025-07-02 21:50:44] ===
+```
+ID;Chức năng;Loại test case;Mô tả;Dữ liệu test;Kỳ vọng;Thực tế;Kết quả
+TC01;Giỏ hàng;UI;Kiểm tra hiển thị các cột; ;Hiển thị đầy đủ các cột: Sản Phẩm, Đơn giá, Số lượng, Tổng; ;
+TC02;Giỏ hàng;UI;Kiểm tra ngôn ngữ hiển thị; ;Ngôn ngữ hiển thị là tiếng Việt; ;
+TC03;Giỏ hàng;UI;Kiểm tra hiển thị tổng tiền; ;Hiển thị dòng tổng tiền; ;
+TC04;Giỏ hàng;UI;Kiểm tra hiển thị button "Thanh toán"; ;Hiển thị button "Thanh toán"; ;
+TC05;Giỏ hàng;UI;Kiểm tra hiển thị liên kết "Tiếp tục mua sắm"; ;Hiển thị liên kết "Tiếp tục mua sắm"; ;
+TC06;Giỏ hàng;UI;Kiểm tra hiển thị button xóa; ;Hiển thị button xóa cho từng sản phẩm; ;
+TC07;Giỏ hàng;Chức năng;Kiểm tra tính toán tổng tiền khi số lượng sản phẩm là 2;Số lượng sản phẩm 1: 2, Số lượng sản phẩm 2: 2;Tổng tiền hiển thị chính xác (tổng đơn giá * số lượng); ;
+TC08;Giỏ hàng;Chức năng;Kiểm tra tính toán tổng của 1 sản phẩm;Số lượng sản phẩm 1: 1;Tổng hiển thị chính xác bằng đơn giá; ;
+TC09;Giỏ hàng;Chức năng;Kiểm tra thay đổi số lượng sản phẩm hợp lệ;Số lượng sản phẩm 1: 2;Số lượng sản phẩm được thay đổi thành công và tổng tiền được cập nhật tương ứng; ;
+TC10;Giỏ hàng;Chức năng;Kiểm tra thay đổi số lượng sản phẩm nhỏ hơn 1;Số lượng sản phẩm 1: 0;Hiển thị thông báo lỗi và số lượng không thay đổi; ;
+TC11;Giỏ hàng;Chức năng;Kiểm tra thay đổi số lượng sản phẩm bằng 1;Số lượng sản phẩm 1: 1;Số lượng sản phẩm được thay đổi thành công; ;
+TC12;Giỏ hàng;Chức năng;Kiểm tra thay đổi số lượng sản phẩm lớn hơn số lượng tồn kho;Số lượng sản phẩm 1: 453;Hiển thị thông báo lỗi và số lượng không thay đổi; ;
+TC13;Giỏ hàng;Chức năng;Kiểm tra chức năng button "Thanh toán"; ;Chuyển hướng đến trang thanh toán; ;
+TC14;Giỏ hàng;Chức năng;Kiểm tra chức năng liên kết "Tiếp tục mua sắm"; ;Chuyển hướng đến trang sản phẩm; ;
+TC15;Giỏ hàng;Chức năng;Kiểm tra chức năng button "Xóa"; ;Sản phẩm được xóa khỏi giỏ hàng và cập nhật tổng tiền; ;
+TC16;Giỏ hàng;Chức năng;Kiểm tra xóa sản phẩm cuối cùng trong giỏ hàng; ;Giỏ hàng trống, hiển thị thông báo (nếu có); ;
+TC17;Giỏ hàng;Chức năng;Kiểm tra tổng tiền khi giỏ hàng trống; ;Tổng tiền hiển thị là 0; ;
+```

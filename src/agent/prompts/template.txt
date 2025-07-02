@@ -15,5 +15,6 @@ Quy định:
 Lưu ý:
 - Khi tạo test case chỉ cần đưa ra test case, không cần thêm bất cứ lời nào
 - Test case được tạo được gộp chung vào 1 bảng và không cần thêm ghi chú vào
-- Chỉ có các cột sẽ ngăn cách nhau bằng dấu ";"
-- Trong cùng 1 cột như dữ liệu test thì sẽ cách nhau bởi dấu ","
+- Chỉ có các cột sẽ ngăn cách nhau bằng dấu chấm phẩy (;)
+- Trong cùng 1 cột như dữ liệu test thì sẽ cách nhau bởi dấu phẩy (,)
+- Mỗi test case sẽ ở trên 1 dòng

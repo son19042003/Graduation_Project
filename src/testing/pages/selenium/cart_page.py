@@ -100,9 +100,9 @@ class CartPage:
                 for row in rows:
                     total_product += self.get_row_total(row)
                 if total_cart == total_product:
-                    return f"Tổng tiền giỏ hàng là hợp lệ"
+                    return f"Tổng tiền hiển thị chính xác"
                 else:
-                    return "Tổng tiền giỏ hàng không hợp lệ"
+                    return "Tổng tiền hiển thị không chính xác"
 
             if any(q == 0 for q in numbers):
                 if any(a == 0 for a in actual_qtys):
@@ -118,10 +118,10 @@ class CartPage:
             else:
                 return "Số lượng sản phẩm hợp lệ"
 
-        if "xóa sản phẩm" in desc:
+        if "xóa" in desc:
             self.delete_first_product()
             driver.implicitly_wait(1)
-            return "Sản phẩm bị xóa khỏi giỏ hàng thành công"
+            return "Sản phẩm được xóa khỏi giỏ hàng"
 
         if "thanh toán" in desc:
             self.click_checkout()
@@ -136,8 +136,8 @@ class CartPage:
             self.click_continue_shopping()
             WebDriverWait(driver, 3).until(EC.url_changes(self.url))
             current_url = driver.current_url
-            if "product" in current_url or "home" in current_url or current_url.endswith("/"):
-                return "Chuyển hướng đến trang chủ hoặc trang sản phẩm"
+            if "product" in current_url:
+                return "Chuyển hướng đến trang sản phẩm"
             else:
                 return f"Chuyển hướng thất bại. URL hiện tại: {current_url}"
 

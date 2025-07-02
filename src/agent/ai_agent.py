@@ -3,6 +3,7 @@ import os
 import json
 from openpyxl import Workbook, load_workbook
 import argparse
+from datetime import datetime
 
 API_KEY = "AIzaSyBKQ5J3HglHv-OhhkQei7Bo_bpZ8i1S5pM"
 API_URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={API_KEY}"
@@ -15,6 +16,8 @@ PROMPT_DIR = os.path.join(os.path.dirname(__file__), 'prompts')
 TEMPLATE_PATH = os.path.join(PROMPT_DIR, 'template.txt')
 EXCEL_OUTPUT_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../data/testcases/testcases.xlsx'))
 PROCESSED_TRACK_PATH = os.path.join(PROMPT_DIR, 'processed_prompts.json')
+
+OUTPUT_LOG_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../data/outputs_from_prompts'))
 
 def load_template():
     if not os.path.exists(TEMPLATE_PATH):
@@ -123,18 +126,32 @@ def main():
         print(generated_text)
         print("\n--- Kết thúc nội dung sinh ---\n")
 
+        output_txt_path = os.path.join(OUTPUT_LOG_DIR, f"{func_name}.txt")
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        header_line = f"\n=== [Generated on {timestamp}] ===\n"
+        with open(output_txt_path, 'a', encoding='utf-8') as f:
+            f.write(header_line)
+            f.write(generated_text.strip() + '\n')
+        print(f"[APPEND] Đã ghi thêm nội dung vào: {output_txt_path}")
+
         testcases = parse_testcase_text(generated_text)
 
         if not testcases:
             print(f"[WARN] Không có test case nào được tạo từ: {file}")
             continue
 
+        if func_name in wb.sheetnames:
+            std = wb[func_name]
+            wb.remove(std)
         ws = wb.create_sheet(title=func_name)
         headers = ["ID", "Chức năng", "Loại test case", "Mô tả", "Dữ liệu test", "Kỳ vọng", "Thực tế", "Kết quả"]
         ws.append(headers)
 
         for row in testcases:
-            ws.append(row)
+            if len(row) == 8 and row[6].strip() == '' and row[7].strip() == '':
+                ws.append(row)
+            else:
+                print(f"[WARN] Bỏ qua dòng không hợp lệ: {row}")
 
         print(f"[DONE] Đã tạo sheet: {func_name}")
         new_processed.add(file)

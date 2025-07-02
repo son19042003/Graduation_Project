@@ -68,14 +68,14 @@ def check_search_box_visible(page):
     search_input = page.locator('input[name="search"]')
     box = search_input.bounding_box()
     if search_input.is_visible() and box and box["width"] > 50:
-        return "Ô tìm kiếm hiển thị đúng vị trí, kích thước hợp lý."
-    return "Ô tìm kiếm không hiển thị đúng."
+        return "Ô tìm kiếm hiển thị"
+    return "Ô tìm kiếm không hiển thị"
 
 def check_search_button_visible(page):
     container = page.locator('.header-search')
     button = container.locator('form.ec-btn-group-form button[type="submit"]')
     if button.count() > 0 and button.first.is_visible():
-        return "Button tìm kiếm hiển thị trong ô tìm kiếm."
+        return "Button tìm kiếm"
     return "Button tìm kiếm không hiển thị."
 
 def check_search_input_allows_all_characters(page):
@@ -84,7 +84,7 @@ def check_search_input_allows_all_characters(page):
     search_input.fill(test_string)
     value = search_input.input_value()
     if value == test_string:
-        return "Ô tìm kiếm cho phép nhập mọi ký tự (chữ, số, ký tự đặc biệt)."
+        return "Ô tìm kiếm cho phép nhập"
     return f"Ô tìm kiếm không cho phép nhập đầy đủ, nhận được: {value}"
 
 #detail
@@ -247,7 +247,7 @@ def check_cart_product_quantity(page):
 def check_cart_checkout_button(page):
     checkout_button = page.locator('.ec-cart-update-bottom a', has_text="Thanh toán")
     if checkout_button.is_visible():
-        return "Button 'Thanh toán' hiển thị rõ ràng, dễ nhận biết"
+        return "Button 'Thanh toán'"
     return "Button 'Thanh toán' không hiển thị"
 
 def check_cart_remove_button(page):
@@ -259,7 +259,7 @@ def check_cart_remove_button(page):
         if not delete_buttons.nth(i).is_visible():
             return f"Button 'Xóa' thứ {i} không hiển thị."
     
-    return "Button 'Xóa' hiển thị rõ ràng, dễ nhận biết"
+    return "Button 'Xóa'"
 
 #checkout
 def check_payment_layout(page):
